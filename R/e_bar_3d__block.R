@@ -25,18 +25,21 @@ e_bar_3d__block <- function(data, ...){
   blockr::initialize_block(new_e_bar_3d__block(data, ...), data)
 }
 
+#' @method server_output e_bar_3d__block
 #' @export
 server_output.e_bar_3d__block <- function (x, result, output) 
 {
     renderEcharts4r(result())
 }
 
+#' @method uiOutputBlock e_bar_3d__block
 #' @export
 uiOutputBlock.e_bar_3d__block <- function (x, ns) 
 {
     echarts4rOutput(ns("res"))
 }
 
+#' @method evaluate_block e_bar_3d__block
 #' @export
 evaluate_block.e_bar_3d__block <- function (x, data, ...) 
 {
@@ -45,12 +48,14 @@ evaluate_block.e_bar_3d__block <- function (x, data, ...)
         list(data = data))
 }
 
+#' @method generate_server e_bar_3d__block
 #' @export
 generate_server.e_bar_3d__block <- function (...) 
 {
     blockr:::generate_server_block(...)
 }
 
+#' @method block_combiner e_bar_3d__block
 #' @export
 block_combiner.e_bar_3d__block <- function (left, right, ...) 
 {

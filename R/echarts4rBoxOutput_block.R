@@ -19,18 +19,21 @@ echarts4rBoxOutput_block <- function(data, ...){
   blockr::initialize_block(new_echarts4rBoxOutput_block(data, ...), data)
 }
 
+#' @method server_output echarts4rBoxOutput_block
 #' @export
 server_output.echarts4rBoxOutput_block <- function (x, result, output) 
 {
     renderEcharts4r(result())
 }
 
+#' @method uiOutputBlock echarts4rBoxOutput_block
 #' @export
 uiOutputBlock.echarts4rBoxOutput_block <- function (x, ns) 
 {
     echarts4rOutput(ns("res"))
 }
 
+#' @method evaluate_block echarts4rBoxOutput_block
 #' @export
 evaluate_block.echarts4rBoxOutput_block <- function (x, data, ...) 
 {
@@ -39,12 +42,14 @@ evaluate_block.echarts4rBoxOutput_block <- function (x, data, ...)
         list(data = data))
 }
 
+#' @method generate_server echarts4rBoxOutput_block
 #' @export
 generate_server.echarts4rBoxOutput_block <- function (...) 
 {
     blockr:::generate_server_block(...)
 }
 
+#' @method block_combiner echarts4rBoxOutput_block
 #' @export
 block_combiner.echarts4rBoxOutput_block <- function (left, right, ...) 
 {

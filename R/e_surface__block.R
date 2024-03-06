@@ -23,18 +23,21 @@ e_surface__block <- function(data, ...){
   blockr::initialize_block(new_e_surface__block(data, ...), data)
 }
 
+#' @method server_output e_surface__block
 #' @export
 server_output.e_surface__block <- function (x, result, output) 
 {
     renderEcharts4r(result())
 }
 
+#' @method uiOutputBlock e_surface__block
 #' @export
 uiOutputBlock.e_surface__block <- function (x, ns) 
 {
     echarts4rOutput(ns("res"))
 }
 
+#' @method evaluate_block e_surface__block
 #' @export
 evaluate_block.e_surface__block <- function (x, data, ...) 
 {
@@ -43,12 +46,14 @@ evaluate_block.e_surface__block <- function (x, data, ...)
         list(data = data))
 }
 
+#' @method generate_server e_surface__block
 #' @export
 generate_server.e_surface__block <- function (...) 
 {
     blockr:::generate_server_block(...)
 }
 
+#' @method block_combiner e_surface__block
 #' @export
 block_combiner.e_surface__block <- function (left, right, ...) 
 {

@@ -17,18 +17,21 @@ e_single_axis_block <- function(data, ...){
   blockr::initialize_block(new_e_single_axis_block(data, ...), data)
 }
 
+#' @method server_output e_single_axis_block
 #' @export
 server_output.e_single_axis_block <- function (x, result, output) 
 {
     renderEcharts4r(result())
 }
 
+#' @method uiOutputBlock e_single_axis_block
 #' @export
 uiOutputBlock.e_single_axis_block <- function (x, ns) 
 {
     echarts4rOutput(ns("res"))
 }
 
+#' @method evaluate_block e_single_axis_block
 #' @export
 evaluate_block.e_single_axis_block <- function (x, data, ...) 
 {
@@ -37,12 +40,14 @@ evaluate_block.e_single_axis_block <- function (x, data, ...)
         list(data = data))
 }
 
+#' @method generate_server e_single_axis_block
 #' @export
 generate_server.e_single_axis_block <- function (...) 
 {
     blockr:::generate_server_block(...)
 }
 
+#' @method block_combiner e_single_axis_block
 #' @export
 block_combiner.e_single_axis_block <- function (left, right, ...) 
 {

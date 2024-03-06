@@ -35,18 +35,21 @@ e_line_block <- function(data, ...){
   blockr::initialize_block(new_e_line_block(data, ...), data)
 }
 
+#' @method server_output e_line_block
 #' @export
 server_output.e_line_block <- function (x, result, output) 
 {
     renderEcharts4r(result())
 }
 
+#' @method uiOutputBlock e_line_block
 #' @export
 uiOutputBlock.e_line_block <- function (x, ns) 
 {
     echarts4rOutput(ns("res"))
 }
 
+#' @method evaluate_block e_line_block
 #' @export
 evaluate_block.e_line_block <- function (x, data, ...) 
 {
@@ -55,12 +58,14 @@ evaluate_block.e_line_block <- function (x, data, ...)
         list(data = data))
 }
 
+#' @method generate_server e_line_block
 #' @export
 generate_server.e_line_block <- function (...) 
 {
     blockr:::generate_server_block(...)
 }
 
+#' @method block_combiner e_line_block
 #' @export
 block_combiner.e_line_block <- function (left, right, ...) 
 {
