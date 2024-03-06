@@ -1,5 +1,4 @@
 library(blockr)
-library(echarts4r)
 devtools::load_all()
 
 stack <- new_stack(
