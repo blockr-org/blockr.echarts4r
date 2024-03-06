@@ -24,6 +24,7 @@ new_echarts4r_proxy_block <- function(data, ...){
   )
 }
 
+#' @export
 echarts4r_proxy_block <- function(data, ...){
   blockr::initialize_block(new_echarts4r_proxy_block(data, ...), data)
 }
@@ -32,14 +33,14 @@ echarts4r_proxy_block <- function(data, ...){
 #' @export
 server_output.echarts4r_proxy_block <- function (x, result, output) 
 {
-    renderEcharts4r(result())
+    echarts4r::renderEcharts4r(result())
 }
 
 #' @method uiOutputBlock echarts4r_proxy_block
 #' @export
 uiOutputBlock.echarts4r_proxy_block <- function (x, ns) 
 {
-    echarts4rOutput(ns("res"))
+    echarts4r::echarts4rOutput(ns("res"))
 }
 
 #' @method evaluate_block echarts4r_proxy_block

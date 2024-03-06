@@ -15,6 +15,7 @@ new_echarts_from_json_block <- function(data, ...){
   )
 }
 
+#' @export
 echarts_from_json_block <- function(data, ...){
   blockr::initialize_block(new_echarts_from_json_block(data, ...), data)
 }
@@ -23,14 +24,14 @@ echarts_from_json_block <- function(data, ...){
 #' @export
 server_output.echarts_from_json_block <- function (x, result, output) 
 {
-    renderEcharts4r(result())
+    echarts4r::renderEcharts4r(result())
 }
 
 #' @method uiOutputBlock echarts_from_json_block
 #' @export
 uiOutputBlock.echarts_from_json_block <- function (x, ns) 
 {
-    echarts4rOutput(ns("res"))
+    echarts4r::echarts4rOutput(ns("res"))
 }
 
 #' @method evaluate_block echarts_from_json_block

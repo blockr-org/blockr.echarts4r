@@ -19,6 +19,7 @@ new_e_axis_labels_block <- function(data, ...){
   )
 }
 
+#' @export
 e_axis_labels_block <- function(data, ...){
   blockr::initialize_block(new_e_axis_labels_block(data, ...), data)
 }
@@ -27,14 +28,14 @@ e_axis_labels_block <- function(data, ...){
 #' @export
 server_output.e_axis_labels_block <- function (x, result, output) 
 {
-    renderEcharts4r(result())
+    echarts4r::renderEcharts4r(result())
 }
 
 #' @method uiOutputBlock e_axis_labels_block
 #' @export
 uiOutputBlock.e_axis_labels_block <- function (x, ns) 
 {
-    echarts4rOutput(ns("res"))
+    echarts4r::echarts4rOutput(ns("res"))
 }
 
 #' @method evaluate_block e_axis_labels_block

@@ -33,6 +33,7 @@ new_e_histogram__block <- function(data, ...){
   )
 }
 
+#' @export
 e_histogram__block <- function(data, ...){
   blockr::initialize_block(new_e_histogram__block(data, ...), data)
 }
@@ -41,14 +42,14 @@ e_histogram__block <- function(data, ...){
 #' @export
 server_output.e_histogram__block <- function (x, result, output) 
 {
-    renderEcharts4r(result())
+    echarts4r::renderEcharts4r(result())
 }
 
 #' @method uiOutputBlock e_histogram__block
 #' @export
 uiOutputBlock.e_histogram__block <- function (x, ns) 
 {
-    echarts4rOutput(ns("res"))
+    echarts4r::echarts4rOutput(ns("res"))
 }
 
 #' @method evaluate_block e_histogram__block

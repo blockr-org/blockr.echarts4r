@@ -27,6 +27,7 @@ new_e_svg__block <- function(data, ...){
   )
 }
 
+#' @export
 e_svg__block <- function(data, ...){
   blockr::initialize_block(new_e_svg__block(data, ...), data)
 }
@@ -35,14 +36,14 @@ e_svg__block <- function(data, ...){
 #' @export
 server_output.e_svg__block <- function (x, result, output) 
 {
-    renderEcharts4r(result())
+    echarts4r::renderEcharts4r(result())
 }
 
 #' @method uiOutputBlock e_svg__block
 #' @export
 uiOutputBlock.e_svg__block <- function (x, ns) 
 {
-    echarts4rOutput(ns("res"))
+    echarts4r::echarts4rOutput(ns("res"))
 }
 
 #' @method evaluate_block e_svg__block

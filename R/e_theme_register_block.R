@@ -15,6 +15,7 @@ new_e_theme_register_block <- function(data, ...){
   )
 }
 
+#' @export
 e_theme_register_block <- function(data, ...){
   blockr::initialize_block(new_e_theme_register_block(data, ...), data)
 }
@@ -23,14 +24,14 @@ e_theme_register_block <- function(data, ...){
 #' @export
 server_output.e_theme_register_block <- function (x, result, output) 
 {
-    renderEcharts4r(result())
+    echarts4r::renderEcharts4r(result())
 }
 
 #' @method uiOutputBlock e_theme_register_block
 #' @export
 uiOutputBlock.e_theme_register_block <- function (x, ns) 
 {
-    echarts4rOutput(ns("res"))
+    echarts4r::echarts4rOutput(ns("res"))
 }
 
 #' @method evaluate_block e_theme_register_block

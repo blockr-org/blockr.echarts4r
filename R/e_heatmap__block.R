@@ -19,6 +19,7 @@ new_e_heatmap__block <- function(data, ...){
   )
 }
 
+#' @export
 e_heatmap__block <- function(data, ...){
   blockr::initialize_block(new_e_heatmap__block(data, ...), data)
 }
@@ -27,14 +28,14 @@ e_heatmap__block <- function(data, ...){
 #' @export
 server_output.e_heatmap__block <- function (x, result, output) 
 {
-    renderEcharts4r(result())
+    echarts4r::renderEcharts4r(result())
 }
 
 #' @method uiOutputBlock e_heatmap__block
 #' @export
 uiOutputBlock.e_heatmap__block <- function (x, ns) 
 {
-    echarts4rOutput(ns("res"))
+    echarts4r::echarts4rOutput(ns("res"))
 }
 
 #' @method evaluate_block e_heatmap__block

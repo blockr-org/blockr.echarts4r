@@ -23,6 +23,7 @@ new_e_sankey_block <- function(data, ...){
   )
 }
 
+#' @export
 e_sankey_block <- function(data, ...){
   blockr::initialize_block(new_e_sankey_block(data, ...), data)
 }
@@ -31,14 +32,14 @@ e_sankey_block <- function(data, ...){
 #' @export
 server_output.e_sankey_block <- function (x, result, output) 
 {
-    renderEcharts4r(result())
+    echarts4r::renderEcharts4r(result())
 }
 
 #' @method uiOutputBlock e_sankey_block
 #' @export
 uiOutputBlock.e_sankey_block <- function (x, ns) 
 {
-    echarts4rOutput(ns("res"))
+    echarts4r::echarts4rOutput(ns("res"))
 }
 
 #' @method evaluate_block e_sankey_block

@@ -19,6 +19,7 @@ new_e_line_3d_block <- function(data, ...){
   )
 }
 
+#' @export
 e_line_3d_block <- function(data, ...){
   blockr::initialize_block(new_e_line_3d_block(data, ...), data)
 }
@@ -27,14 +28,14 @@ e_line_3d_block <- function(data, ...){
 #' @export
 server_output.e_line_3d_block <- function (x, result, output) 
 {
-    renderEcharts4r(result())
+    echarts4r::renderEcharts4r(result())
 }
 
 #' @method uiOutputBlock e_line_3d_block
 #' @export
 uiOutputBlock.e_line_3d_block <- function (x, ns) 
 {
-    echarts4rOutput(ns("res"))
+    echarts4r::echarts4rOutput(ns("res"))
 }
 
 #' @method evaluate_block e_line_3d_block

@@ -33,6 +33,7 @@ new_echarts4rBox_block <- function(data, ...){
   )
 }
 
+#' @export
 echarts4rBox_block <- function(data, ...){
   blockr::initialize_block(new_echarts4rBox_block(data, ...), data)
 }
@@ -41,14 +42,14 @@ echarts4rBox_block <- function(data, ...){
 #' @export
 server_output.echarts4rBox_block <- function (x, result, output) 
 {
-    renderEcharts4r(result())
+    echarts4r::renderEcharts4r(result())
 }
 
 #' @method uiOutputBlock echarts4rBox_block
 #' @export
 uiOutputBlock.echarts4rBox_block <- function (x, ns) 
 {
-    echarts4rOutput(ns("res"))
+    echarts4r::echarts4rOutput(ns("res"))
 }
 
 #' @method evaluate_block echarts4rBox_block

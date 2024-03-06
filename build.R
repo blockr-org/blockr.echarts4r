@@ -27,10 +27,10 @@ generate_blocks(
       blockr:::generate_server_block(...)
     },
     output_function = function(x, ns) {
-      echarts4rOutput(ns("res"))
+      echarts4r::echarts4rOutput(ns("res"))
     },
     render_function = function(x, result, output) {
-      renderEcharts4r(result())
+      echarts4r::renderEcharts4r(result())
     },
     block_combiner = function(left, right, ...) {
       substitute(
