@@ -1,3 +1,4 @@
+#' @import blockr
 new_e_format_y_axis_block <- function(data, ...){
   blockr::new_block(
     name = "e_format_y_axis_block",

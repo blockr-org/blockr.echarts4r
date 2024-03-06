@@ -1,3 +1,4 @@
+#' @import blockr
 new_e_globe_block <- function(data, ...){
   blockr::new_block(
     name = "e_globe_block",

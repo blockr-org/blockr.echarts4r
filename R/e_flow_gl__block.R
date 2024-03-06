@@ -1,3 +1,4 @@
+#' @import blockr
 new_e_flow_gl__block <- function(data, ...){
   blockr::new_block(
     name = "e_flow_gl__block",

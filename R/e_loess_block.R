@@ -1,3 +1,4 @@
+#' @import blockr
 new_e_loess_block <- function(data, ...){
   blockr::new_block(
     name = "e_loess_block",

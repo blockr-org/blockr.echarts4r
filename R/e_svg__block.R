@@ -1,3 +1,4 @@
+#' @import blockr
 new_e_svg__block <- function(data, ...){
   blockr::new_block(
     name = "e_svg__block",

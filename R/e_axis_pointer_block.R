@@ -1,3 +1,4 @@
+#' @import blockr
 new_e_axis_pointer_block <- function(data, ...){
   blockr::new_block(
     name = "e_axis_pointer_block",

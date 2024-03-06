@@ -1,3 +1,4 @@
+#' @import blockr
 new_e_heatmap__block <- function(data, ...){
   blockr::new_block(
     name = "e_heatmap__block",

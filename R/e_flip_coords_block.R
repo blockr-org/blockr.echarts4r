@@ -1,3 +1,4 @@
+#' @import blockr
 new_e_flip_coords_block <- function(data, ...){
   blockr::new_block(
     name = "e_flip_coords_block",

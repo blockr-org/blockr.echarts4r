@@ -1,3 +1,4 @@
+#' @import blockr
 new_e_treemap__block <- function(data, ...){
   blockr::new_block(
     name = "e_treemap__block",

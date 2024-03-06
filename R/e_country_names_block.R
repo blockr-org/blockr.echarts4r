@@ -1,3 +1,4 @@
+#' @import blockr
 new_e_country_names_block <- function(data, ...){
   blockr::new_block(
     name = "e_country_names_block",

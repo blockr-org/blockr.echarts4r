@@ -1,3 +1,4 @@
+#' @import blockr
 new_e_show_loading_block <- function(data, ...){
   blockr::new_block(
     name = "e_show_loading_block",

@@ -1,3 +1,4 @@
+#' @import blockr
 new_e_timeline_opts_block <- function(data, ...){
   blockr::new_block(
     name = "e_timeline_opts_block",

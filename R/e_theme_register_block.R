@@ -1,3 +1,4 @@
+#' @import blockr
 new_e_theme_register_block <- function(data, ...){
   blockr::new_block(
     name = "e_theme_register_block",

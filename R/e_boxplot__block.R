@@ -1,3 +1,4 @@
+#' @import blockr
 new_e_boxplot__block <- function(data, ...){
   blockr::new_block(
     name = "e_boxplot__block",

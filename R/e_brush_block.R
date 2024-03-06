@@ -1,3 +1,4 @@
+#' @import blockr
 new_e_brush_block <- function(data, ...){
   blockr::new_block(
     name = "e_brush_block",

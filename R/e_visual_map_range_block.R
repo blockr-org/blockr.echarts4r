@@ -1,3 +1,4 @@
+#' @import blockr
 new_e_visual_map_range_block <- function(data, ...){
   blockr::new_block(
     name = "e_visual_map_range_block",

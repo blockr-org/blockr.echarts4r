@@ -1,3 +1,4 @@
+#' @import blockr
 new_e_text_style_block <- function(data, ...){
   blockr::new_block(
     name = "e_text_style_block",

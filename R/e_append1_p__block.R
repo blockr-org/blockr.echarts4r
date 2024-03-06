@@ -1,3 +1,4 @@
+#' @import blockr
 new_e_append1_p__block <- function(data, ...){
   blockr::new_block(
     name = "e_append1_p__block",

@@ -1,3 +1,4 @@
+#' @import blockr
 new_e_lines_3d__block <- function(data, ...){
   blockr::new_block(
     name = "e_lines_3d__block",

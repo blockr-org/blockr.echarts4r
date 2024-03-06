@@ -1,3 +1,4 @@
+#' @import blockr
 new_echarts4rProxy_block <- function(data, ...){
   blockr::new_block(
     name = "echarts4rProxy_block",

@@ -1,3 +1,4 @@
+#' @import blockr
 new_e_gauge_block <- function(data, ...){
   blockr::new_block(
     name = "e_gauge_block",

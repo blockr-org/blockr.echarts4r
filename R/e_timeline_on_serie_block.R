@@ -1,3 +1,4 @@
+#' @import blockr
 new_e_timeline_on_serie_block <- function(data, ...){
   blockr::new_block(
     name = "e_timeline_on_serie_block",

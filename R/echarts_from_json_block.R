@@ -1,3 +1,4 @@
+#' @import blockr
 new_echarts_from_json_block <- function(data, ...){
   blockr::new_block(
     name = "echarts_from_json_block",

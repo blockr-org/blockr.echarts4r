@@ -1,3 +1,4 @@
+#' @import blockr
 new_e_effect_scatter__block <- function(data, ...){
   blockr::new_block(
     name = "e_effect_scatter__block",

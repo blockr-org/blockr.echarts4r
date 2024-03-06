@@ -1,3 +1,4 @@
+#' @import blockr
 new_e_draw_p_block <- function(data, ...){
   blockr::new_block(
     name = "e_draw_p_block",

@@ -1,3 +1,4 @@
+#' @import blockr
 new_e_bezier_curve_g_block <- function(data, ...){
   blockr::new_block(
     name = "e_bezier_curve_g_block",

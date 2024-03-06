@@ -1,3 +1,4 @@
+#' @import blockr
 new_e_surface__block <- function(data, ...){
   blockr::new_block(
     name = "e_surface__block",

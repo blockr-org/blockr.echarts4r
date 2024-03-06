@@ -1,3 +1,4 @@
+#' @import blockr
 new_e_arc_g_block <- function(data, ...){
   blockr::new_block(
     name = "e_arc_g_block",

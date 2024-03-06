@@ -1,3 +1,4 @@
+#' @import blockr
 new_e_axis__block <- function(data, ...){
   blockr::new_block(
     name = "e_axis__block",

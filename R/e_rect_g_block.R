@@ -1,3 +1,4 @@
+#' @import blockr
 new_e_rect_g_block <- function(data, ...){
   blockr::new_block(
     name = "e_rect_g_block",

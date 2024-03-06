@@ -1,3 +1,4 @@
+#' @import blockr
 new_e_error_bar__block <- function(data, ...){
   blockr::new_block(
     name = "e_error_bar__block",

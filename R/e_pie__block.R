@@ -1,3 +1,4 @@
+#' @import blockr
 new_e_pie__block <- function(data, ...){
   blockr::new_block(
     name = "e_pie__block",

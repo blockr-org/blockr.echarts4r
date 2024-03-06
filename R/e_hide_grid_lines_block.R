@@ -1,3 +1,4 @@
+#' @import blockr
 new_e_hide_grid_lines_block <- function(data, ...){
   blockr::new_block(
     name = "e_hide_grid_lines_block",

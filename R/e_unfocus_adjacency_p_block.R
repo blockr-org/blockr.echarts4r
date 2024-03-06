@@ -1,3 +1,4 @@
+#' @import blockr
 new_e_unfocus_adjacency_p_block <- function(data, ...){
   blockr::new_block(
     name = "e_unfocus_adjacency_p_block",
