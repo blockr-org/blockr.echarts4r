@@ -2,6 +2,30 @@ library(blockr.generate)
 
 generate_blocks(
   "echarts4r",
+  filter_functions = \(fns){
+    # end in underscore
+    base <- fns[grepl("_$", fns)]
+
+    extra <- c(
+      "e_animation",
+      "e_aria",
+      "e_brush",
+      "e_calendar",
+      "e_datazoom",
+      "e_draft",
+      "e_facet",
+      "e_geo",
+      "e_globe",
+      "e_grid",
+      "e_leaflet",
+      "e_legend",
+      "e_legend_scroll",
+      "e_legend_select"
+    )
+
+    c(base, extra) |>
+      unique()
+  },
   functions = define(
     e_chart = define(input = "data.frame", classes = NA),
     e_charts = define(input = "data.frame", classes = NA),
