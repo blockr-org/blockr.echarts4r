@@ -659,4 +659,14 @@
     package = pkgname,
     classes = c("e_legend_select_block", "echarts_layer_block")
   )
+
+  blockr::register_block(
+    e_tooltip_block,
+    "e_tooltip",
+    "A block",
+    input = "echarts4r",
+    output = "echarts4r",
+    package = pkgname,
+    classes = c("e_tooltip_block", "echarts_layer_block")
+  )
 }

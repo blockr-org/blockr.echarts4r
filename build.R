@@ -20,7 +20,8 @@ generate_blocks(
       "e_leaflet",
       "e_legend",
       "e_legend_scroll",
-      "e_legend_select"
+      "e_legend_select",
+      "e_tooltip"
     )
 
     c(base, extra) |>
